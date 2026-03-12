@@ -1,25 +1,25 @@
 # 🎤 Voice Navigator
 
-Assistente de acessibilidade baseado em comandos de voz para controle do computador e navegação na internet.
+Assistente de acessibilidade baseado em comandos de voz para **navegação na internet**.
 
 ---
 
 # 📖 Sobre o Projeto
 
-O **Voice Navigator** é um software desenvolvido em **Python** que permite controlar o computador utilizando **comandos de voz**.
+O **Voice Navigator** é um software desenvolvido em **Python** que permite navegar na internet utilizando **comandos de voz**.
 
-O objetivo principal é **aumentar a acessibilidade digital**, permitindo que pessoas com mobilidade reduzida, deficiência visual ou dificuldades motoras utilizem o computador de forma mais independente.
+O objetivo principal é **aumentar a acessibilidade digital**, permitindo que pessoas com mobilidade reduzida, deficiência visual ou dificuldades motoras naveguem na web sem a necessidade de utilizar teclado ou mouse.
 
-O sistema interpreta comandos de voz e executa ações no sistema operacional ou no navegador.
+O sistema interpreta comandos de voz e executa ações diretamente no navegador.
 
 ---
 
 # 🎯 Objetivos
 
-- Permitir controle do computador por voz  
-- Facilitar navegação na internet sem uso de mouse ou teclado  
+- Permitir navegação na internet por voz  
+- Facilitar acesso a sites sem uso de mouse ou teclado  
 - Criar uma ferramenta acessível para usuários com limitações físicas  
-- Explorar tecnologias de automação e reconhecimento de voz em Python  
+- Explorar tecnologias de automação de navegador e reconhecimento de voz  
 
 ---
 
@@ -40,7 +40,6 @@ Este projeto foi pensado especialmente para:
 - **Python**
 - **speech_recognition** – reconhecimento de voz
 - **PyAudio** – captura de áudio do microfone
-- **PyAutoGUI** – controle do sistema operacional
 - **Playwright** – automação de navegador
 - **pyttsx3** – feedback por voz
 
@@ -58,16 +57,16 @@ Reconhecimento de voz
 ↓
 Interpretação do comando
 ↓
-Execução da ação
+Execução da ação no navegador
 
 
-As ações podem incluir:
+Exemplos de ações possíveis:
 
-- Abrir aplicativos
 - Abrir sites
 - Pesquisar no Google
 - Navegar em páginas web
-- Executar comandos no sistema
+- Rolar páginas
+- Clicar em elementos
 
 ---
 
@@ -86,7 +85,6 @@ commands/
 └── command_registry.py
 
 controllers/
-├── system_controller.py
 └── browser_controller.py
 
 utils/
@@ -98,9 +96,10 @@ utils/
 # 🚀 Funcionalidades Planejadas
 
 - Reconhecimento de comandos de voz
-- Abertura de aplicativos
-- Automação de navegador
+- Abertura de sites
 - Pesquisa por voz
+- Navegação em páginas
+- Rolagem de páginas
 - Feedback sonoro
 - Sistema modular para novos comandos
 
@@ -128,30 +127,28 @@ Exemplos:
 
 "abrir google"
 "abrir youtube"
-"abrir calculadora"
+"pesquisar python"
 
 
-### RF04 – Execução de comandos do sistema
+### RF04 – Abertura de sites
 
-O sistema deve executar ações no sistema operacional.
+O sistema deve permitir abrir páginas web através de comandos de voz.
 
-Exemplos:
+### RF05 – Pesquisa por voz
 
-- abrir aplicativos  
-- pressionar teclas  
-- controlar o mouse  
+O sistema deve permitir realizar pesquisas na internet utilizando comandos de voz.
 
-### RF05 – Automação do navegador
+### RF06 – Navegação em páginas
 
-O sistema deve permitir controlar o navegador através de comandos de voz.
+O sistema deve permitir navegar dentro de páginas web através de comandos de voz.
 
 Exemplos:
 
-- abrir um site  
-- pesquisar no Google  
-- navegar em páginas  
+- rolar página
+- clicar em links
+- voltar página
 
-### RF06 – Feedback ao usuário
+### RF07 – Feedback ao usuário
 
 O sistema deve fornecer retorno ao usuário informando que o comando foi executado.
 
@@ -160,7 +157,7 @@ Exemplo:
 "Abrindo Google"
 
 
-### RF07 – Tratamento de comandos inválidos
+### RF08 – Tratamento de comandos inválidos
 
 O sistema deve informar quando um comando não for reconhecido.
 
@@ -177,7 +174,7 @@ Os requisitos não funcionais descrevem **como o sistema deve funcionar**.
 
 ### RNF01 – Usabilidade
 
-O sistema deve ser simples de utilizar, permitindo interação apenas por voz.
+O sistema deve permitir interação apenas por voz.
 
 ### RNF02 – Performance
 
@@ -189,7 +186,7 @@ O sistema deve tratar erros de reconhecimento de voz sem interromper a execuçã
 
 ### RNF04 – Escalabilidade
 
-Novos comandos de voz devem poder ser adicionados facilmente ao sistema.
+Novos comandos devem poder ser adicionados facilmente ao sistema.
 
 ### RNF05 – Portabilidade
 
@@ -210,7 +207,7 @@ O sistema possui algumas limitações técnicas:
 
 - dependência de microfone para captura de áudio
 - dependência de bibliotecas externas para reconhecimento de voz
-- necessidade de acesso ao sistema operacional para automação
+- dependência de automação do navegador
 
 ---
 
@@ -219,11 +216,10 @@ O sistema possui algumas limitações técnicas:
 Possíveis evoluções do sistema incluem:
 
 - interpretação de linguagem natural
-- integração com visão computacional
-- reconhecimento de pessoas
+- leitura de conteúdo de páginas web
+- descrição automática de elementos da página
 - sistema de plugins para novos comandos
-- interface gráfica para configuração do sistema
-- modo acessibilidade para deficientes visuais
+- interface gráfica de configuração
 
 ---
 
